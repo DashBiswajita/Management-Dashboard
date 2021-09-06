@@ -24,7 +24,7 @@ form {
     border-radius: 5%;
     background-image: linear-gradient(145deg, yellowgreen, #69b36a);
     color: white;
-    input[type = text] {
+    input[type = text] , input[type = number] {
         width : 100%;
         height: 2rem;
         border-radius: 2%;
@@ -33,7 +33,7 @@ form {
     input::placeholder{
         color : #69b36a
     }
-    input[type = text]:focus {
+    input[type = text]:focus,input[type = number]:focus {
         outline : 3px solid greenyellow
     }
     button{

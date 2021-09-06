@@ -1,0 +1,13 @@
+<div class="container-child"><div class="card card--item" *ngFor="let item of items" draggable="true" id={{item.id}} (dragstart) = 'drag($event,item)' (dragover) = 'allowDrop($event)' >
+    <div>
+        <header class="header">
+            <h2>{{item.title}}</h2>
+        </header>
+        <ng-container class="content">
+           <p class="description">{{item.desc}}</p>
+        </ng-container>
+        <footer class="footer">
+           <a (click)="deleteItem(item.id)"><span>X</span></a>
+        </footer>
+    </div>
+</div></div>

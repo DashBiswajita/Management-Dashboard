@@ -1,0 +1,22 @@
+<form [formGroup]="addForm" novalidate (ngSubmit)='onsubmit()'>
+    <div>
+        <label for="type">Select Type</label><br>
+        <input type="radio" name="type" formControlName='type' value="LIST"> List
+        <input type="radio" name = "type" formControlName='type' value="ITEM"> Item
+    </div>
+    <div *ngIf="this.addForm.get('type').value === 'ITEM'">
+        <label for="fkey">Provide the list ID where you want to add</label><br>
+        <input type="number" name="fkey" formControlName='fkey' placeholder="Provide the List ID">
+    </div>
+    <div>
+        <label for="title">Title</label><br>
+        <input type="text" name="title" formControlName='title' placeholder="Provide the title">
+    </div>
+    <div>
+        <label for="desc">Description</label><br>
+        <input type="text" name="desc" formControlName='desc' placeholder="Provide the description">
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>

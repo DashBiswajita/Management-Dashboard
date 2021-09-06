@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.7;
+    color: #777;
+}
+a,a:link,a:visited,a:hover,a:active{
+   cursor: pointer;
+   text-decoration: none;
+}
+form {
+    border: 1px solid #69b36a;
+    margin : auto;
+    width : 30%;
+    padding: 2rem;
+    border-radius: 5%;
+    background-image: linear-gradient(145deg, yellowgreen, #69b36a);
+    color: white;
+    input[type = text] {
+        width : 100%;
+        height: 2rem;
+        border-radius: 2%;
+        border: 1px solid white;
+    }
+    input::placeholder{
+        color : #69b36a
+    }
+    input[type = text]:focus {
+        outline : 3px solid greenyellow
+    }
+    button{
+        font-size: 1rem;
+        padding: 0.3rem;
+        margin: 0.3rem 0;
+        color : #69b36a;
+        
+        background-color: white;
+        border : 1px solid white;
+
+    }
+}
+
+.card {
+    display: grid;
+    
+    
+    &--parent{
+        grid-template-columns: repeat(3, 15rem);
+        grid-row-gap: 2rem;
+        grid-column-gap: 2rem;
+        justify-content: center;
+        grid-auto-flow: row;
+        color: white;
+        &__mod{
+            border: 1px solid #69b36a;
+            box-shadow: 1px 2px 3px yellowgreen;
+            background-image: linear-gradient(145deg, yellowgreen, #69b36a);
+        }
+        
+    }
+    &--item{
+        color: white;
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+        grid-auto-flow: column;
+        margin: 2rem;
+        border: 1px solid #69b36a;
+            box-shadow: 1px 2px 3px yellowgreen;
+    }
+    
+    
+}
+
+.content{
+    
+}
+.main-header{
+    height: 10rem;
+}
+.header {
+    margin : 1rem 0.5rem;
+    position: relative;
+    &__primary{
+        padding-top: 0.5rem;
+        margin: auto;
+        display: block;
+        text-align: center;
+        height: 5rem;
+        color: #69b36a;
+    }
+    .addList{
+        color: #69b36a;
+        font-size: 1.5rem;
+        background-color:white;
+        border: 1px solid #69b36a;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        position: absolute;
+        right: 2rem;
+        margin-right: 2rem;
+    }
+    h2,span {
+        display: inline;
+    }
+    h2{
+        left: 00.5rem;
+    }
+    .delete{
+        position: absolute;
+        right : 0.5rem;
+    }
+    
+}
+
+.footer{
+    margin: 1rem;
+    height: 2rem;
+    display: block;
+    text-align: center;
+    color: rgb(116, 106, 106);
+    span{
+        color: white;
+    }
+    &__add{
+        font-size: 2rem;
+        color : white;
+    }
+}

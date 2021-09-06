@@ -1,0 +1,18 @@
+<div class="card card--parent">
+   <div class="card--parent__mod" *ngFor="let list of mgmtList"  id={{list.id}}_{{list.title}} (drop)="drop($event,list.id)" (dragover)="allowDrop($event)">
+      <div>
+         <header class="header">
+            <h2>{{list.title}}</h2>
+            <a class="delete" (click) = "deleteList(list.id)"><span>X</span></a>
+         </header>
+         <main class="content">
+            <app-item-list [items]="list.items" (mgmtListEvent) = "getUpdatedMgmtList(data)"  ></app-item-list>
+         </main>
+         <footer class="footer">
+           <a routerLink="/add"><span class="footer__add">&#43;</span></a> 
+         </footer>
+      </div>
+   
+   </div>
+
+</div>

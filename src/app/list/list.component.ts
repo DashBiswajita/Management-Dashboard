@@ -32,7 +32,7 @@ export class ListComponent implements OnInit {
   getUpdatedMgmtList(data:any[]){
      this.mgmtList = data;
   }
-  drop(ev,id) {
+  drop(ev,id:number) {
     ev.preventDefault();
     let data = ev.dataTransfer.getData("text");
     let item = JSON.parse(ev.dataTransfer.getData("item"));

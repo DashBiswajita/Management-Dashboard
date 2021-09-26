@@ -1,6 +1,6 @@
 <div class="card card--parent">
    <div class="card--parent__mod" *ngFor="let list of mgmtList"  id={{list.id}}_{{list.title}} (drop)="drop($event,list.id)" (dragover)="allowDrop($event)">
-      <div>
+      <div class="card--parent__mod__list">
          <header class="header">
             <h2>{{list.title}}</h2>
             <a class="delete" (click) = "deleteList(list.id)"><span>X</span></a>

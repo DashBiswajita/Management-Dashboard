@@ -1,5 +1,5 @@
 <div class="container-child"><div class="card card--item" *ngFor="let item of items" draggable="true" id={{item.id}} (dragstart) = 'drag($event,item)' (dragover) = 'allowDrop($event)' >
-    <div>
+    <div class="card">
         <header class="header">
             <h2>{{item.title}}</h2>
         </header>

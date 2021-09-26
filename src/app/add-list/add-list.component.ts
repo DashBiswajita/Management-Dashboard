@@ -52,5 +52,7 @@ export class AddListComponent implements OnInit {
         )
     }
   }
-
+  onCancel = function () {
+    this.router.navigate(['list']);
+  }
 }
